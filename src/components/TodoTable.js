@@ -4,10 +4,10 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-material.css';
 
 const columns = [
-   { headerName: 'Date', field: 'date', sortable: true},
    { headerName: 'Description', field: 'description', sortable: true},
    { headerName: 'Priority', field: 'priority', sortable: true, filter: true,
-      cellStyle: params => params.value === "High" ? {color: 'red'} : {color: 'black'}}
+      cellStyle: params => params.value === "High" ? {color: 'red'} : {color: 'black'}},
+   { headerName: 'Date', field: 'date', sortable: true}
  ];
 
  export default function TodoTable({ todos, deleteTodo, gridRef }) {
@@ -16,7 +16,7 @@ const columns = [
          className="ag-theme-material"
          style={{
             height: '700px',
-            width: '80%',
+            width: '50%',
             margin: 'auto',
          }}
       >
